@@ -2,11 +2,11 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('dasc-cache-v1').then(cache => {
       return cache.addAll([
-        '/home',
-        '/index.html',
-        '/manifest.json',
-        '/icons/icon-192x192.png',
-        '/icons/icon-512x512.png'
+        '/discord-pwa/home',
+        '/discord-pwa/index.html',
+        '/discord-pwa/manifest.json',
+        '/discord-pwa/icons/icon-192x192.png',
+        '/discord-pwa/icons/icon-512x512.png'
       ]);
     })
   );
