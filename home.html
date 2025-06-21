@@ -2,21 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Discord Account Support</title>
+
+  <!-- Standard PWA Manifest -->
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#1a73e8" />
+
+  <!-- Safari iOS-specific Meta -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="DASC">
+  <link rel="apple-touch-icon" href="icon-192.png" />
 </head>
 <body>
   <h1>Welcome to Discord Account Support</h1>
-  <p>This is the PWA version of your workspace.</p>
+  <p>This is the PWA app version of your workspace.</p>
 
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('Service Worker registered!'))
-          .catch(error => console.error('Service Worker registration failed:', error));
+          .then(() => console.log('Service Worker Registered'))
+          .catch(err => console.error('Service Worker registration failed:', err));
       });
     }
   </script>
